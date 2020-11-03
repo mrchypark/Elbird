@@ -7,11 +7,13 @@
 extract_words(reader, min_cnt = 10, max_word_len = 10, min_score = 0.25)
 }
 \arguments{
-\item{word}{target word}
+\item{reader}{target word}
 
-\item{pos}{pos}
+\item{min_cnt}{pos}
 
-\item{score}{score}
+\item{max_word_len}{score}
+
+\item{min_score}{score}
 }
 \description{
 Extract unregistered words from corpus provided user.

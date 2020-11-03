@@ -1,8 +1,9 @@
 #' Extract unregistered words from corpus provided user.
 #'
-#' @param word target word
-#' @param pos   pos
-#' @param score score
+#' @param reader target word
+#' @param min_cnt   pos
+#' @param max_word_len score
+#' @param min_score score
 #'
 #' @export
 extract_words <- function(reader,
@@ -17,9 +18,12 @@ extract_words <- function(reader,
 
 #' Extract unregistered words from corpus provided user.
 #'
-#' @param word target word
-#' @param pos   pos
-#' @param score score
+#' @param reader target word
+#' @param min_cnt   pos
+#' @param max_word_len score
+#' @param min_score score
+#' @param pos_score eifj
+#'
 #'
 #' @export
 extract_filter_words <- function(reader,
@@ -34,9 +38,11 @@ extract_filter_words <- function(reader,
 
 #' Extract unregistered words from corpus provided user.
 #'
-#' @param word target word
-#' @param pos   pos
-#' @param score score
+#' @param reader target word
+#' @param min_cnt   pos
+#' @param max_word_len score
+#' @param min_score score
+#' @param pos_score eifj
 #'
 #' @export
 extract_add_words <- function(reader,

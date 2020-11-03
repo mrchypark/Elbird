@@ -4,3 +4,5 @@
 ^LICENSE\.md$
 .github
 R/.logo.R
+^README_kr\.Rmd$
+^README_kr\.md$

@@ -33,6 +33,31 @@ read_user_dict <- function(path) {
   latest_el()
 }
 
+#' Read Sejong dictionary data
+#'
+#' @importFrom Sejong
+#' @importFrom fs
+#' @importFrom readr read_tsv write_tsv
+#'
+#' @export
+read_sejong_dict <- function() {
+  if (init_chk_not())
+    init()
+
+  dicpath <- file.path(system.file(package="Sejong"), "dics", "handic.zip")
+  conn <- unz(dicpath, file.path("data","kE","dic_user2.txt"))
+  dic <- readr::read_tsv(conn, col_names = F, progress = F)
+  dic$X3 <- 1
+
+  readr::write_tsv(dic, "sejong.tsv", col_names = F)
+
+  dict_history <- get("dict_history", envir = .el)
+  dict_history[["path"]] <- c(dict_history[["path"]], "sejong.tsv")
+  assign("dict_history", dict_history, envir = .el)
+  latest_el()
+}
+
+
 #' Export user dictionary data
 #'
 #' @param path dictionary

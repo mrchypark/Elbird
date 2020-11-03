@@ -13,11 +13,15 @@ extract_filter_words(
 )
 }
 \arguments{
-\item{word}{target word}
+\item{reader}{target word}
 
-\item{pos}{pos}
+\item{min_cnt}{pos}
 
-\item{score}{score}
+\item{max_word_len}{score}
+
+\item{min_score}{score}
+
+\item{pos_score}{eifj}
 }
 \description{
 Extract unregistered words from corpus provided user.
